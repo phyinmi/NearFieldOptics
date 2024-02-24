@@ -91,9 +91,9 @@ BN_STW=AnisotropicMaterial(eps_infinity=[4.95,4.95,4.1],\
                            eps_lps=eps_lps)
 
 
-w_TOs=[1360]; w_LOs=[1614]; gs=[7]; eps_inf=2.95; eps0=6.9
+w_TOs=[1360]; w_LOs=[1614]; gs=[7]; eps_inf=4.9; eps0=6.9  #c-axis eps_inf should be 4.90
 eps_lps=[[(eps_inf*(w_LO**2-w_TO**2),w_TO,g) for w_TO,w_LO,g in zip(w_TOs,w_LOs,gs)]]*2
-w_TOs=[760]; w_LOs=[825]; gs=[2]; eps_inf=4.9; eps0=3.48
+w_TOs=[760]; w_LOs=[825]; gs=[2]; eps_inf=2.95; eps0=3.48  #ab-axis eps_inf should be 2.95
 eps_lps+=[[(eps_inf*(w_LO**2-w_TO**2),w_TO,g) for w_TO,w_LO,g in zip(w_TOs,w_LOs,gs)]]
 BN_Caldwell=AnisotropicMaterial(eps_infinity=[2.95,2.95,4.9],\
                            eps_lps=eps_lps)
